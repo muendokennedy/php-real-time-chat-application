@@ -56,6 +56,7 @@ form .name-details .field:last-child{
   margin-left: 1rem;
 }
 .form form .field{
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
@@ -86,6 +87,14 @@ form .name-details .field:last-child{
   background: #333;
   color: #fff;
   border-radius: .5rem;
+  cursor: pointer;
+}
+.form form .field i{
+  position: absolute;
+  right: 1.5rem;
+  color: #ccc;
+  top: 70%;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 .form .link{
