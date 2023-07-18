@@ -6,3 +6,96 @@
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
 }
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+.wrapper{
+  background: #fff;
+  width: 45rem;
+  border-radius: 1.6rem;
+  box-shadow: 0 0 12.8rem 0 rgba(0,0,0,0.1),
+              0 3.2rem 6.4rem -4.8rem rgba(0,0,0,0.5);
+}
+/* The signup form styling */
+.form{
+  padding: 2.5rem 3rem;
+}
+.form header{
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  border-bottom: .1rem solid #e6e6e6;
+}
+.form form{
+  margin: 2rem 0;
+}
+.form form .error-text{
+  color: #721c24;
+  background: #f8d7da;
+  padding: .8rem 1rem;
+  text-align: center;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #f8d7da;
+}
+.form form .name-details{
+  display: flex;
+}
+form .name-details .field:first-child{
+  margin-right: 1rem;
+}
+form .name-details .field:last-child{
+  margin-left: 1rem;
+}
+.form form .field{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.form form .field label{
+  margin-bottom: .2rem;
+}
+.form form .field input{
+  outline: none;
+}
+.form form .input input{
+  height: 4rem;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 0 1rem;
+  border: .1rem solid #ccc;
+  border-radius: .5rem;
+}
+.form form .image input{
+  font-size: 1.7rem;
+}
+.form form .button input{
+  margin-top: 1.3rem;
+  height: 4.5rem;
+  border: none;
+  font-size: 1.7rem;
+  font-weight: 400;
+  background: #333;
+  color: #fff;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+.form .link{
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+}
+.form .link a{
+  color: #333;
+}
+.form .link a:hover{
+  text-decoration: underline;
+}
