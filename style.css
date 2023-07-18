@@ -108,3 +108,71 @@ form .name-details .field:last-child{
 .form .link a:hover{
   text-decoration: underline;
 }
+/* styling of the users page */
+.users{
+  padding: 2.5rem 3rem;
+}
+.users header{
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+  justify-content: space-between;
+  border-bottom: .1rem solid #e6e6e6;
+}
+.wrapper img{
+  object-fit: cover;
+  border-radius: 50%;
+}
+.users header .content{
+  display: flex;
+}
+.users header .content img{
+  height: 5rem;
+  width: 5rem;
+}
+.users header .details{
+  margin-left: 1.5rem;
+}
+.users header .details span{
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.users header .logout{
+  color: #fff;
+  font-size: 1.7rem;
+  background: #333;
+  padding: .7rem 1.5rem;
+  border-radius: .5rem;
+}
+.users .search{
+  margin: 2rem 0;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+.users .search .text{
+  font-size: 1.8rem;
+}
+.users .search input{
+  position: absolute;
+  height: 4.2rem;
+  width: calc(100% - 5rem);
+  border: .1rem solid #ccc;
+  padding: 0 1.3rem;
+  font-size: 1.6rem;
+  border-radius: .5rem;
+  outline: none;
+  border-radius: .5rem 0 0 .5rem;
+}
+.users .search button{
+  width: 4.7rem;
+  height: 4.2rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #333;
+  font-size: 1.7rem;
+  cursor: pointer;
+  border-radius: 0 .5rem .5rem 0;
+}
