@@ -112,7 +112,8 @@ form .name-details .field:last-child{
 .users{
   padding: 2.5rem 3rem;
 }
-.users header{
+.users header,
+.users-list a{
   display: flex;
   align-items: center;
   padding-bottom: 2rem;
@@ -123,17 +124,19 @@ form .name-details .field:last-child{
   object-fit: cover;
   border-radius: 50%;
 }
-.users header .content{
+:is(.users, .users-list) .content{
   display: flex;
+  align-items: center;
 }
 .users header .content img{
   height: 5rem;
   width: 5rem;
 }
-.users header .details{
+:is(.users, .users-list) .details{
+  color: #000;
   margin-left: 1.5rem;
 }
-.users header .details span{
+:is(.users, .users-list) .details span{
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -175,4 +178,32 @@ form .name-details .field:last-child{
   font-size: 1.7rem;
   cursor: pointer;
   border-radius: 0 .5rem .5rem 0;
+}
+.users-list{
+  max-height: 35rem;
+  overflow-y: auto;
+}
+.users-list::-webkit-scrollbar{
+  width: 0;
+}
+.users-list a{
+  padding-right: 1.5rem;
+  break-after: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom-color: #f1f1f1;
+}
+.users-list a .content img{
+  height: 4rem;
+  width: 4rem;
+}
+.users-list a .content p{
+  color: #67676a;
+}
+.users-list a .status-dot{
+  font-size: 1.2rem;
+  color: #468669;
+}
+/* A class to show the offline status of a particular user */
+.users-list a .status-dot.offline{
+  color: #ccc;
 }
