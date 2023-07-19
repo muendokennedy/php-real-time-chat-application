@@ -183,7 +183,7 @@ form .name-details .field:last-child{
   max-height: 35rem;
   overflow-y: auto;
 }
-.users-list::-webkit-scrollbar{
+:is(.users-list, .chat-box)::-webkit-scrollbar{
   width: 0;
 }
 .users-list a{
@@ -228,6 +228,7 @@ form .name-details .field:last-child{
 }
 .chat-box{
   height: 50rem;
+  overflow-y: auto;
   background: #f7f7f7;
   padding: 1rem 3rem 2rem 3rem;
   box-shadow: inset 0 3.2rem 3.2rem -3.2rem rgb(0 0 0 / 5%),
@@ -237,6 +238,7 @@ form .name-details .field:last-child{
   margin: 1.5rem 0;
 }
 .chat-box .chat p{
+  word-wrap: break-word;
   padding: .8rem 1.6rem;
   box-shadow: 0 0 3.2rem rgb(0 0 0 / 8%),
               0 1.6rem 1.6rem -1.6rem rgb(0 0 0 / 10%);
@@ -270,4 +272,28 @@ form .name-details .field:last-child{
   background: #fff;
   color: #333;
   border-radius: 1.8rem 1.8rem 1.8rem 0;
+}
+.chat-area .typing-area{
+  padding: 1.8rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.typing-area input{
+  height: 4.5rem;
+  width: calc(100% - 5.8rem);
+  font-size: 1.7rem;
+  border: .1rem solid #ccc;
+  padding: 0 1.3rem;
+  border-radius: .5rem 0 0 .5rem;
+  outline: none;
+}
+.typing-area button{
+  width: 5.5rem;
+  border: none;
+  outline: none;
+  background: #333;
+  color: #fff;
+  font-size: 1.9rem;
+  cursor: pointer;
+  border-radius: 0 .5rem .5rem 0;
 }
