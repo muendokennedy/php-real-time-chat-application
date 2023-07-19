@@ -13,30 +13,30 @@
   <div class="wrapper">
     <section class="form signup">
       <header>Realtime Chat App</header>
-      <form action="#">
+      <form action="#" enctype="multipart/form-data">
         <div class="error-text">This is an error message</div>
         <div class="name-details">
           <div class="field input">
             <label>First Name</label>
-            <input type="text" placeholder="Enter First Name...">
+            <input type="text" name="fname" placeholder="Enter First Name..." required>
           </div>
           <div class="field input">
             <label>Last Name</label>
-            <input type="text" placeholder="Enter Last Name...">
+            <input type="text" name="lname" placeholder="Enter Last Name..." required>
           </div>
         </div>
         <div class="field input">
           <label>Email address</label>
-          <input type="text" placeholder="Enter Email...">
+          <input type="text" name="email" placeholder="Enter Email..." required>
         </div>
         <div class="field input">
           <label>Password</label>
-          <input type="password" placeholder="Enter Password...">
+          <input type="password" name="pwd" placeholder="Enter Password..." required>
           <i class="fas fa-eye"></i>
         </div>
         <div class="field image">
           <label>Select Image</label>
-          <input type="file">
+          <input type="file" name="profile-pic">
         </div>
         <div class="field button">
           <input type="submit" value="Continue to chat">
@@ -46,5 +46,6 @@
     </section>
   </div>
   <script src="javascript/passwordToggler.js"></script>
+  <script src="javascript/signup.js"></script>
 </body>
 </html>
