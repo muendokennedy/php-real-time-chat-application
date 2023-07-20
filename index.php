@@ -14,29 +14,33 @@
     <section class="form signup">
       <header>Realtime Chat App</header>
       <form action="#" enctype="multipart/form-data">
-        <div class="error-text">This is an error message</div>
         <div class="name-details">
           <div class="field input">
             <label>First Name</label>
-            <input type="text" name="fname" placeholder="Enter First Name..." required>
+            <input type="text" name="fname" placeholder="Enter First Name...">
+            <div class="error"></div>
           </div>
           <div class="field input">
             <label>Last Name</label>
-            <input type="text" name="lname" placeholder="Enter Last Name..." required>
+            <input type="text" name="lname" placeholder="Enter Last Name...">
+            <div class="error"></div>
           </div>
         </div>
         <div class="field input">
           <label>Email address</label>
-          <input type="text" name="email" placeholder="Enter Email..." required>
+          <input type="text" name="email" placeholder="Enter Email...">
+          <div class="error email unique"></div>
         </div>
         <div class="field input">
           <label>Password</label>
-          <input type="password" name="pwd" placeholder="Enter Password..." required>
+          <input type="password" name="pwd" placeholder="Enter Password...">
+          <div class="error"></div>
           <i class="fas fa-eye"></i>
         </div>
         <div class="field image">
           <label>Select Image</label>
           <input type="file" name="profile-pic">
+          <div class="error file"></div>
         </div>
         <div class="field button">
           <input type="submit" value="Continue to chat">
