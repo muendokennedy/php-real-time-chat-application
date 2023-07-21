@@ -1,5 +1,6 @@
 const searchBar = document.querySelector(".users .search input"),
-searchBtn = document.querySelector(".users .search button");
+searchBtn = document.querySelector(".users .search button"),
+usersList = document.querySelector(".users-list");
 
 searchBtn.onclick = () => {
   searchBar.classList.toggle("active");
@@ -16,8 +17,10 @@ setInterval(() => {
     xmlhttp.onload = () => {
       if(xmlhttp.readyState === XMLHttpRequest.DONE && xmlhttp.status === 200){
         let data = xmlhttp.responseText;
-  
-        console.log(data);
+
+        // usersList.innerHTML = data;
+
+        c
 
       }
     }

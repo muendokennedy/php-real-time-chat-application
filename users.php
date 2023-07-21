@@ -35,66 +35,7 @@ if(!isset($_SESSION['unique_id'])){
         <button><i class="fas fa-search"></i></button>
       </div>
       <div class="users-list">
-        <a href="#">
-          <div class="content">
-            <img src="img.jpeg" alt="The first user">
-            <div class="details">
-              <span>Kennedy Munyao</span>
-              <p>This is a test massage</p>
-            </div>
-          </div>
-          <div class="status-dot"><i class="fas fa-circle"></i></div>
-        </a>
-        <a href="#">
-          <div class="content">
-            <img src="img.jpeg" alt="The first user">
-            <div class="details">
-              <span>Kennedy Munyao</span>
-              <p>This is a test massage</p>
-            </div>
-          </div>
-          <div class="status-dot"><i class="fas fa-circle"></i></div>
-        </a>
-        <a href="#">
-          <div class="content">
-            <img src="img.jpeg" alt="The first user">
-            <div class="details">
-              <span>Kennedy Munyao</span>
-              <p>This is a test massage</p>
-            </div>
-          </div>
-          <div class="status-dot"><i class="fas fa-circle"></i></div>
-        </a>
-        <a href="#">
-          <div class="content">
-            <img src="img.jpeg" alt="The first user">
-            <div class="details">
-              <span>Kennedy Munyao</span>
-              <p>This is a test massage</p>
-            </div>
-          </div>
-          <div class="status-dot"><i class="fas fa-circle"></i></div>
-        </a>
-        <a href="#">
-          <div class="content">
-            <img src="img.jpeg" alt="The first user">
-            <div class="details">
-              <span>Kennedy Munyao</span>
-              <p>This is a test massage</p>
-            </div>
-          </div>
-          <div class="status-dot"><i class="fas fa-circle"></i></div>
-        </a>
-        <a href="#">
-          <div class="content">
-            <img src="img.jpeg" alt="The first user">
-            <div class="details">
-              <span>Kennedy Munyao</span>
-              <p>This is a test message</p>
-            </div>
-          </div>
-          <div class="status-dot"><i class="fas fa-circle"></i></div>
-        </a>
+        
       </div>
     </section>
   </div>
