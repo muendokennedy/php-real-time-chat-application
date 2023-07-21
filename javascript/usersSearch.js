@@ -6,3 +6,20 @@ searchBtn.onclick = () => {
   searchBar.focus();
   searchBtn.classList.toggle("active");
 }
+
+setInterval(() => {
+    // starting AJAX 
+    let xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.open("GET", "php/users.php", true);
+  
+    xmlhttp.onload = () => {
+      if(xmlhttp.readyState === XMLHttpRequest.DONE && xmlhttp.status === 200){
+        let data = xmlhttp.responseText;
+  
+        console.log(data);
+
+      }
+    }
+    xmlhttp.send();
+}, 500); // This runs after every half a second

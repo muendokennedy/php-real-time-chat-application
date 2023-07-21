@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Realtime chat App</title>
-  <!-- The custom css style-sheet -->
-  <link rel="stylesheet" href="style.css">
-  <!-- The fontawesome CDN link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-</head>
+<?php require_once "header.php"; ?>
 <body>
   <div class="wrapper">
     <section class="form signup">
@@ -46,7 +36,7 @@
           <input type="submit" value="Continue to chat">
         </div>
       </form>
-      <div class="link">Already signed up? <a href="#">Login now</a></div>
+      <div class="link">Already signed up? <a href="login.php">Login now</a></div>
     </section>
   </div>
   <script src="javascript/passwordToggler.js"></script>

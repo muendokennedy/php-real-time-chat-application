@@ -1,9 +1,8 @@
-const form = document.querySelector(".signup form"),
+const form = document.querySelector(".login form"),
 continueBtn = document.querySelector(".button input"),
 errorRequired = document.querySelectorAll(".error"),
 errorEmail = document.querySelector(".email"),
-errorFile = document.querySelector(".file"),
-uniqueEmail = document.querySelector(".unique");
+wrongPwd = document.querySelector(".wrong-pwd");
 
 form.onsubmit = (e) => {
   e.preventDefault(); // Prevent the form from submitting
@@ -12,11 +11,13 @@ continueBtn.onclick = () => {
   // starting AJAX 
   let xmlhttp = new XMLHttpRequest();
 
-  xmlhttp.open("POST", "php/signup.php", true);
+  xmlhttp.open("POST", "php/login.php", true);
 
   xmlhttp.onload = () => {
     if(xmlhttp.readyState === XMLHttpRequest.DONE && xmlhttp.status === 200){
       let data = xmlhttp.responseText;
+
+      console.log(data);
 
       for (let i = 0; i < errorRequired.length; i++) {
         errorRequired[i].style.display = "none";
@@ -34,20 +35,19 @@ continueBtn.onclick = () => {
               errorRequired[i].previousElementSibling.style.borderColor = "red";
             }
           }
-        } else if(data == "email_unique"){
-          uniqueEmail.style.display = "block";
-          uniqueEmail.textContent = "User with this email exists";
-          uniqueEmail.previousElementSibling.style.borderColor = "red";
-        } else if(data == "email_valid"){
+        }else if(data == "email_valid"){
           errorEmail.style.display = "block";
           errorEmail.textContent = "Enter a valid email address";
           errorEmail.previousElementSibling.style.borderColor = "red";
-        } else if(data == "file_invalid"){
-          errorFile.style.display = "block";
-          errorFile.textContent = "Please enter a jpg, jpeg or png file";
-          errorFile.previousElementSibling.style.borderColor = "red";
-        }
-      
+        }else if(data == "incorrect_email"){
+          errorEmail.style.display = "block";
+          errorEmail.textContent = "You entered incorrect email";
+          errorEmail.previousElementSibling.style.borderColor = "red";
+        }else if(data == "incorrect_password"){
+          wrongPwd.style.display = "block";
+          wrongPwd.textContent = "You entered a wrong password";
+          wrongPwd.previousElementSibling.style.borderColor = "red";
+        }                 
     }
   }
   // Sending the form data

@@ -2,11 +2,13 @@
 
 require_once "config.php";
 
+session_start();
+
 $fname = mysqli_real_escape_string($conn, $_POST['fname']);
 $lname = mysqli_real_escape_string($conn, $_POST['lname']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
-// $fname = mysqli_real_escape_string($conn, $_POST['profile-pic']);
+
 
 if(!empty($fname) && !empty($lname) && !empty($email) && !empty($pwd)){
   // Checking the validity of the email
@@ -54,8 +56,6 @@ if(!empty($fname) && !empty($lname) && !empty($email) && !empty($pwd)){
           if($sql->num_rows > 0){
 
             $row = $sql->fetch_assoc();
-
-            session_start();
 
             $_SESSION['unique_id'] = $row['unique_id'];
 
