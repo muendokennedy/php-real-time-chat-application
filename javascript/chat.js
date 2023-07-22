@@ -19,12 +19,23 @@ sendBtn.onclick = () => {
       let data = xmlhttp.responseText;
       // Empty the input value once the message in submitted
       inputField.value = "";
-      scrollToBottom();
+      if(!chatBox.classList.contains("active")){
+        scrollToBottom();
+      }
     }
   }
   // Sending the form data
   const formData = new FormData(form);
   xmlhttp.send(formData);
+}
+
+// Prevent the chats from scrolling up automatically when the user is scrolling
+
+chatBox.onmouseenter = () => {
+  chatBox.classList.add("active");
+}
+chatBox.onmouseleave = () => {
+  chatBox.classList.remove("active");
 }
 
 setInterval(() => {
@@ -38,7 +49,9 @@ setInterval(() => {
       let data = xmlhttp.responseText;
 
       chatBox.innerHTML = data;
-      scrollToBottom();
+      if(!chatBox.classList.contains("active")){
+        scrollToBottom();
+      }
 
     }
   }

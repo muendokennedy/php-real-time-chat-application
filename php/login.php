@@ -16,12 +16,16 @@ if(!empty($email) && !empty($pwd)){
   
       if(password_verify($pwd, $row["password"])){
 
+        $sql = $conn->query("UPDATE users SET status = 'Active now' WHERE unique_id = {$row['unique_id']};");
+
         // set a session variable with the unique key
 
-        $_SESSION['unique_id'] = $row['unique_id'];
-
-        echo "success";
-        
+        if($sql){
+          
+          $_SESSION['unique_id'] = $row['unique_id'];
+          echo "success";
+          
+        }  
       } else {
         echo "incorrect_password";
       }
