@@ -24,7 +24,7 @@ if(!isset($_SESSION['unique_id'])){
           <img src="php/uploads/<?php echo $row["img"]; ?>" alt="user">
           <div class="details">
             <span><?php echo $row["fname"] . " " .  $row["lname"]; ?></span>
-            <p><?php echo $row["status"] ?? "Offline" ?></p>
+            <p><?php echo $row["status"]; ?></p>
           </div>
         </div>
         <a href="logout.php" class="logout">Logout</a>
