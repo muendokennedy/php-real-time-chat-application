@@ -19,6 +19,7 @@ sendBtn.onclick = () => {
       let data = xmlhttp.responseText;
       // Empty the input value once the message in submitted
       inputField.value = "";
+      scrollToBottom();
     }
   }
   // Sending the form data
@@ -37,6 +38,7 @@ setInterval(() => {
       let data = xmlhttp.responseText;
 
       chatBox.innerHTML = data;
+      scrollToBottom();
 
     }
   }
@@ -44,3 +46,7 @@ setInterval(() => {
   const formData = new FormData(form);
   xmlhttp.send(formData);
 }, 500); // This runs after every half a second
+
+function scrollToBottom(){
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
