@@ -39,6 +39,6 @@ if(!isset($_SESSION['unique_id'])){
       </div>
     </section>
   </div>
-  <script src="javascript/usersSearch.js?v=<?php echo time(); ?>"></script> 
+  <script src="javascript/users.js?v=<?php echo time(); ?>"></script> 
 </body>
 </html>
