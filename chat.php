@@ -29,39 +29,7 @@ if(!isset($_SESSION['unique_id'])){
         </div>
       </header>
       <div class="chat-box">
-        <div class="chat outgoing">
-          <div class="details">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="chat incoming">
-          <img src="img.jpeg" alt="incoming user">
-          <div class="details">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="chat outgoing">
-          <div class="details">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="chat incoming">
-          <img src="img.jpeg" alt="incoming user">
-          <div class="details">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="chat outgoing">
-          <div class="details">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="chat incoming">
-          <img src="img.jpeg" alt="incoming user">
-          <div class="details">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
+        
       </div>
       <form action="#" class="typing-area" autocomplete="off">
         <input type="hidden" name="outgoing_msg_id" value="<?php echo $_SESSION['unique_id']; ?>">

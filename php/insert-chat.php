@@ -12,16 +12,6 @@ if(isset($_SESSION['unique_id'])){
 
 
   if(!empty($message)){
-    echo $message;
-    // $sql = "INSERT INTO users(unique_id, fname, lname, email, password, img, status) VALUES(?, ?, ?, ?, ?, ?, ?);";
-
-    // $stmt = $conn->prepare($sql);
-
-    // $hashed_pwd = password_hash($pwd, PASSWORD_DEFAULT);
-
-    // $stmt->bind_param("issssss", $random_id, $fname, $lname, $email, $hashed_pwd,  $new_img_name, $status);
-
-    // $stmt->execute();
     $sql = $conn->query("INSERT INTO messages(incoming_msg_id,outgoing_msg_id,message) VALUES('$incoming_msg_id', '$outgoing_msg_id', '$message')") or die();
   }
 
