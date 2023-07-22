@@ -3,11 +3,11 @@ session_start();
 
 require_once "config.php";
 
-$sql = $conn->query("SELECT * FROM users;");
+$sql = $conn->query("SELECT * FROM users WHERE NOT unique_id = {$_SESSION['unique_id']};");
 
 $output = "";
 
-if($sql->num_rows == 1){
+if($sql->num_rows == 0){
   $output .= "No users available to chat";
 }else{
   require_once "data.php";
